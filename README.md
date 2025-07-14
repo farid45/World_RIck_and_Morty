@@ -1,12 +1,31 @@
-# React + Vite
+# Исследователь Вселенной Рика и Морти
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Баннер проекта](https://rickandmortyapi.com/api/character/avatar/1.jpeg)
 
-Currently, two official plugins are available:
+Веб-приложение для изучения вселенной мультсериала "Рик и Морти" с использованием официального API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Основные возможности
 
-## Expanding the ESLint configuration
+- 🎬 Просмотр всех серий с детальной информацией
+- 🗺️ Исследование локаций из разных измерений
+- 👥 Карточки персонажей с индикаторами статуса
+- ✨ Интерактивный дизайн с плавными анимациями
+- 📱 Полностью адаптивный интерфейс
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Технологии
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+## 🚀 Установка и запуск
+
+```bash
+# Клонировать репозиторий
+git clone https://github.com/farid45/World_RIck_and_Morty.git
+
+# Перейти в папку проекта
+cd World_RIck_and_Morty
+
+# Запустить приложение
+npm run dev
