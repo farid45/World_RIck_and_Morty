@@ -1,0 +1,274 @@
+/* Стиль */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a2a3a;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Форма */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #42b983;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+/* Две колонки */
+.content-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+  .content-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content-column {
+  background-color: #2c3e50;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  color: #42b983;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #42b983;
+  font-size: 1.5rem;
+}
+
+/* Прокручивание */
+.scrollable-list {
+  max-height: 75vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Стиль прокручивания */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #34495e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #42b983;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3aa876;
+}
+
+/* Стиль карт */
+.content-card {
+  background-color: #34495e;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.content-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #3b4a5a;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.content-header h3 {
+  margin: 0;
+  color: #42b983;
+  font-size: 1.1rem;
+}
+
+.content-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #bdc3c7;
+}
+
+.content-meta span {
+  background-color: rgba(66, 185, 131, 0.2);
+  padding: 3px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.content-details {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #42b983;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 20px;
+  text-align: center;
+}
+
+/* карточки персонажей */
+.characters-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.character-card {
+  background-color: #3b4a5a;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  transition: transform 0.2s;
+}
+
+.character-card:hover {
+  transform: translateY(-5px);
+}
+
+.character-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.character-info {
+  padding: 12px;
+  flex-grow: 1;
+}
+
+.character-info h3 {
+  margin: 0 0 5px 0;
+  color: #42b983;
+}
+
+.character-meta {
+  font-size: 0.9rem;
+  color: #bdc3c7;
+}
+
+.character-status {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.status-alive {
+  background-color: #55cc44;
+}
+
+.status-dead {
+  background-color: #ff5555;
+}
+
+.status-unknown {
+  background-color: #ffcc00;
+}
+
+/* стадии */
+.loading {
+  text-align: center;
+  padding: 30px;
+  color: #42b983;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #ff5555;
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(255, 85, 85, 0.1);
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+.no-data {
+  text-align: center;
+  padding: 15px;
+  color: #bdc3c7;
+  font-style: italic;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .character-card {
+    flex-direction: column;
+  }
+  
+  .character-image {
+    width: 100%;
+    height: 150px;
+  }
+
+  .content-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Анимация */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #42b983;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 10px;
+  vertical-align: middle;
+}
